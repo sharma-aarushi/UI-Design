@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src=https://code.jquery.com/jquery-3.3.1.min.js crossorigin="anonymous"></script>
+
+    <!-- <script>
+        // var count = 0
+        // function incrementCount(c) {
+        //     return c + 1;
+        // }
+        $(document).ready(function () {
+            $("#counter").click(function () {
+                // count = incrementCount(count)
+                // $("#counter").html("Counter(" + count + ")")
+                createButton()
+            })
+
+        })
+
+        function createButton() {
+            var new_button = $("<button class='btn btn-default'>")
+            $(new_button).text("Counter")
+            $("#updates").append(new_button)
+            $("#updates").append("<br")
+
+            var d = "foo"
+            $(new_button).click(function () { alert(d) })
+        }
+
+
+
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            $("#counter").click(function () {
+                createButton();
+                $(this).hide(); // Hides the initial button after it's clicked
+            });
+        });
+
+        // function createButton() {
+        //     var new_button = $("<button class='btn btn-default'>");
+        //     $(new_button).text("Counter");
+        //     $("#updates").append(new_button);
+        //     $("#updates").append("<br>");
+
+
+
+        function createButton() {
+            var newButton = $("<button class='btn btn-default'>Counter</button>");
+            $("#updates").append(newButton);
+            $("#updates").append("<br>");
+
+            $(newButton).click(function () {
+                var randomNumber = Math.random();
+                console.log("I was clicked " + randomNumber);
+                // console.log("I was clicked " + randomNumber);
+                alert("You just clicked the button!");
+            });
+        }
+
+        //      var d = "foo"
+        //     $(new_button).click(function () { alert(d); });
+        // }
+        // $("#updates").click(function () {
+        //     alert("I was clicked" + Date.now());
+        // });
+        // $("#updates").click(function () {
+        //     alert("I was clicked" + Date.now());
+        // });
+
+    </script>
+    <!-- // </head>
+// <body>
+//     <button id="counter" class="btn btn-primary">Create Button</button>
+//     <br><br>
+//     <div id="updates"></div>
+// </body>
+// </html> -->
+
+    </script>
+
+    <style>
+        #counter {
+            margin: 20px;
+        }
+
+        #updates button {
+            margin: 10px;
+            /* Adjust as needed */
+            padding: 5px;
+            /* Adjust as needed */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="counter" class="btn btn-primary"></button>
+    <br><br>
+    <div id="updates"></div>
+
+</body>
+
+</html>
